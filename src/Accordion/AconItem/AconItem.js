@@ -111,14 +111,7 @@ export default ({
 				) : (
 					<>
 						<div className={`mark ${roadmap.isMain && 'main'} ${roadmap.childrens.length === 0 && roadmap.isMain && 'mainWork'}`}></div>
-						<div className='toggleBtn' onClick={() => togleCheckbox(!roadmap.isChecked, roadmap.id)}>
-							{roadmap.isChecked || hasActiveChildrens(roadmap.childrens).isCheckAll ?
-								<GoCheckCircle />
-								: hasActiveChildrens(roadmap.childrens).hasInclude ?
-									<MdOutlineRadioButtonChecked />
-									:
-									<MdOutlineRadioButtonUnchecked />}
-						</div>
+						
 						<div className='title'>
 							{roadmap.name}
 						</div>
