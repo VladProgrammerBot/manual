@@ -5,7 +5,7 @@ import Menu from '../Menu'
 
 import { RiPencilFill } from "react-icons/ri";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { MdOutlineRadioButtonUnchecked, MdOutlineRadioButtonChecked, MdDeleteOutline } from "react-icons/md";
+import { MdDeleteOutline } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { IoMdAdd } from "react-icons/io";
 import { GoCheckCircle } from "react-icons/go";

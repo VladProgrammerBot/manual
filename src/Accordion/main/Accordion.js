@@ -37,37 +37,6 @@ export default ({
 		}
 	}, [roadmaps])
 
-	const togleCheckbox = (value, id) => {
-		const setChildrensActive = (roadmap) => {
-			return roadmap.map((child) => {
-				return {
-					...child,
-					isChecked: value,
-					childrens: setChildrensActive(child.childrens)
-				}
-			})
-		}
-
-		const newRoadmap = (roadmaps) => {
-			return roadmaps.map((roadmap) => {
-				if (roadmap.id === id) {
-					return {
-						...roadmap,
-						isChecked: value,
-						childrens: setChildrensActive(roadmap.childrens),
-					}
-				}
-
-				return {
-					...roadmap,
-					childrens: newRoadmap(roadmap.childrens),
-				}
-			})
-		}
-
-		setRoadmaps(newRoadmap(roadmaps))
-	}
-
 	const ChangeFolderName = (id, inputValue) => {
 		const newRoadmap = (roadmaps) => {
 			return roadmaps.map((roadmap) => {
@@ -158,7 +127,6 @@ export default ({
 					<AconItem
 						key={item.id}
 						roadmap={item}
-						togleCheckbox={togleCheckbox}
 						addFolder={addFolder}
 						removeFolder={removeFolder}
 						toggleMainFolder={toggleMainFolder}
